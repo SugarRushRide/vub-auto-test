@@ -1,4 +1,4 @@
-module VubExportTime
+module vub-auto-test
 
 go 1.24.0
 
