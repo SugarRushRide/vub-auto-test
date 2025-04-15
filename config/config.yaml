@@ -1,4 +1,24 @@
-login_name: chengjun.jiang
-password: shanghai0303
-login_type_id: 2
-univ_code: RC0202800
+credentials:
+  login_name: chengjun.jiang
+  password: shanghai0303
+  login_type_id: 2
+  univ_code: RC0202800
+
+# ----------------------------
+# 浏览器基础配置
+# ----------------------------
+browser:
+  # 是否无头模式运行（调试时建议设为false）
+  headless: false
+  # 全局操作超时时间（支持单位：ns, us, ms, s, m, h）
+  timeout: "30s"
+  # 自定义用户代理（可选）
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+  # 窗口尺寸配置
+  window_size:
+    width: 1920   # 窗口宽度
+    height: 1080  # 窗口高度
+  # 指定Chrome/Chromium可执行路径（默认使用系统PATH）
+  exec_path: ""
+  # 代理服务器配置（可选）
+  proxy: ""
