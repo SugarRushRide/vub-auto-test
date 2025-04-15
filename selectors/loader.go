@@ -28,7 +28,7 @@ func Load(path string) (SelectorConfig, error) {
 func Get(config SelectorConfig, path string) (string, error) {
 	paths := strings.Split(path, ".")
 	current := config
-	for _, path := range paths {
+	for i, path := range paths {
 		value, exists := current[path]
 		if !exists {
 			return "", fmt.Errorf("path does not exist: %s", path)
@@ -38,7 +38,7 @@ func Get(config SelectorConfig, path string) (string, error) {
 		case SelectorConfig:
 			current = v
 		case string:
-			if len(path) > 1 {
+			if len(paths)-i > 1 {
 				return "", fmt.Errorf("path is incomplete: %s", path)
 			}
 			return v, nil
